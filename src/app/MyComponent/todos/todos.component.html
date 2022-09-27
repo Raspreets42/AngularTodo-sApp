@@ -1,0 +1,16 @@
+<app-forms (todoAdd)="addTodo($event)"></app-forms>
+
+<div class="container" id="todosContainer">
+    <h4 style="font-size: 1.8vmax;">Todo's : </h4>
+    <hr>
+    <div *ngIf="this.todos.length === 0 ; else elseBlock" style="font-weight: bold;">No Todo's to display...</div>
+    <ng-template #elseBlock>
+        <div id="todosFlex">
+            <div *ngFor="let todo of todos;" style="margin: 1vmax;">
+                <app-todo-items [todo]="todo" (todoDelete)="deleteTodo($event)"></app-todo-items>
+            </div>
+        </div>
+    </ng-template>
+
+    <hr>
+</div>

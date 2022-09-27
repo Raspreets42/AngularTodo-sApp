@@ -1,0 +1,15 @@
+<div class="container" id="formContainer">
+  <h4 style="font-size: 1.8vmax;">Add a Todo : </h4>
+  <hr>
+  <form class="my-2" (ngSubmit)="onSubmit()" style="font-size: 1.4vmax;">
+    <div class="mb-3">
+      <label for="inputTitle" class="form-label" style="font-weight: bold;"> Title : </label>
+      <input type="text" class="form-control" id="inputTitle" name="inputTitle" [(ngModel)]="title">
+    </div>
+    <div class="mb-3">
+      <label for="inputDescription" class="form-label" style="font-weight: bold;">Description : </label>
+      <input type="text" class="form-control" id="inputDescription" name="inputDescription" [(ngModel)]="description">
+    </div>
+    <button type="submit" class="btn btn-success" style="font-size: 1.4vmax;">Add Todo</button>
+  </form>
+</div>
